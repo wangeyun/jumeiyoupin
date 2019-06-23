@@ -1,0 +1,16 @@
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,dl,dd,form,fieldset,legend,input,textarea,select,figure,span,figcaption{margin:0;padding:0}
+
+a{text-decoration: none;}
+em{font-style:normal}
+li{list-style:none}
+img{vertical-align:middle}/*解决图片插入元素下方撑大三个像素的bug*/
+/*以上是重置样式*/
+
+
+
+$fontSize:14px;
+#headertop{
+	$fontSize:12px;
+	font-size: $fontSize;
+	
+}

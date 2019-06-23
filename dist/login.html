@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登陆聚美</title>
+		<link rel="stylesheet" href="css/login.css" />
+	</head>
+	<body>
+		<!-- 整体开始 -->
+		<div class="jumei">
+			<!-- 头部开始 -->
+			<div class="header">
+				<a href="index.html"><img src="imgs/logo.jpg" alt="聚美logo" class="logo" /></a>
+				<div class="top-link">
+					<a href="#" class="link"><img src="imgs/alink.png"></a>
+					<a href="#" class="link2"><img src="imgs/alink2.png"></a>
+					<a href="#" class="link3"><img src="imgs/alink3.png"></a>
+				</div>
+			</div>
+			<!-- 头部结束-->
+			<!-- 中部开始 -->
+			<div class="contain">
+				<!-- 中部左边 -->
+				<div class="nav-left">
+					<a href="index.html"><img src="imgs/loginbiaoqing.png" /></a>
+				</div>
+				<!-- 中部右边 -->
+				<div class="nav-right">
+					<!-- 表单开始表1 -->
+					<form action="#" method="get">
+						<div class="user-register" >
+							<a href="login.html" id="register">登陆聚美</a>
+							<span class="to-login">还没有聚美账号?
+								<a href="register.html">30秒注册</a>
+							</span>
+						</div>
+						<div class="radio_wrapper">
+							<span>
+								<input name="method" type="radio" rel="login-dynamic-form" value="dynamic" id="radio_dynamic" />
+								<span>
+									手机动态密码登录
+								</span>
+							</span>
+							<span>
+								<input name="method" type="radio" rel="login-user-form" value="normal" id="radio_normal" />
+								<span>
+									普通登录
+								</span>
+							</span>
+						</div>
+						<input style="display:none" type="text" name="fakeusernameremembered" />
+						<input style="display:none" type="password" name="fakepasswordremembered" />
+						<div class="textbox_ui user"  style="display:none">
+							<input type="text" placeholder="已注册的手机号码" id="dynamic_mobile" autofocus autocomplete="off" value="">
+							<div class="focus_text">请输入11位手机号码</div>
+							<div class="invalid">
+								<i></i>
+								<div class="msg"></div>
+							</div>
+						</div>
+						<div class="dynamic_pass_wrap line" id="dynamicpassone"  style="display:none">
+							<div class="textbox_ui dynamic_pass pass">
+								<input type="text" placeholder="动态密码" id="dynamic_password" autocomplete="off">
+								<div class="focus_text">请点击获取手机动态密码</div>
+								<div class="hint"></div>
+								<div class="invalid">
+									<i></i>
+									<div class="msg"></div>
+								</div>
+							</div>
+							<a href="javascript:;" id="getPhoneCode" class="phonecode"><strong>获取手机动态密码</strong></a>
+						</div>
+						<p class="dynamic_auto_left"  style="display:none">
+							<label for="dynamic_auto_login">
+								<input type="checkbox" id="dynamic_auto_login" checked>
+								&nbsp;自动登录
+							</label>
+						</p>
+
+						<input  style="display:none" class="loginbtn submit_btn" type="submit" value="登 录" style=" display: block;width: 100%;">
+
+					</form>
+					<!-- 表单开始表2 -->
+					<form id="login-user-form" method="post" action="/i/account/login">
+                    <input style="display:none" type="text" name="fakeusernameremembered"/>
+                    <input style="display:none" type="password" name="fakepasswordremembered"/>
+                    <div class="textbox_ui user">
+                        <input type="text" placeholder="已验证手机/邮箱/用户名" id="username" autofocus autocomplete="off" value="">
+                        <div class="focus_text">请输入登录名可能是您的手机号、邮箱或用户名</div>
+                        <div class="invalid">
+                            <i></i>
+                            <div class="msg"></div>
+                        </div>
+                    </div>
+                    <div class="textbox_ui pass">
+                        <input type="password" placeholder="密码" id="login_password" autocomplete="off">
+                        <div class="focus_text">请输入您的密码可能为字母、数字或符号的组合</div>
+                        <div class="invalid">
+                            <i></i>
+                            <div class="msg"></div>
+                        </div>
+                    </div>
+                    <div class="gtVerifyWrap">
+                        <div class="textbox_ui">
+                            <p class="gtHeader">请拖动下方的滚动条，完成拼图验证</p>
+                            <div class="clearfix">
+                                
+                            </div>
+                            <div id="gt_verify"></div>
+                            <div class="invalid">
+                                <i></i>
+                                <div class="msg"></div>
+                            </div>
+                        </div>
+                    </div>
+					<div class="aliyunWrap textbox_ui">
+					    <div id="aliyun_verify" style="width:300px;height:46px;" ></div>
+					    <div class="invalid aliyun_invalid">
+					        <i></i>
+					        <div class="msg"></div>
+					    </div>
+					</div>
+                    <div class="verityWrap" style="display:none">
+                        <div class="textbox_ui">
+                            <input type="text" placeholder="验证码" autocomplete="off" id="verify_code" maxlength="4">
+                            <div class="focus_text">按右图填写，不区分大小写</div>
+                            <div class="invalid">
+                                <i></i>
+                                <div class="msg"></div>
+                            </div>
+                        </div>
+                        <span id="change_verify_code"><img src="">换一张</span>
+                    </div>
+                    <p class="dynamic_auto_between">	
+						<label for="auto_login">
+							<input type="checkbox" id="auto_login" checked>
+							&nbsp;自动登录
+						</label>
+                        <a href="/i/account/resetreq?=login" class="fr">忘记密码?</a>
+                    </p>
+                    <input class="loginbtn submit_btn" type="submit" value="登 录" style=" display: block;width: 100%;">
+                    <div id="errorMsg"></div>
+                </form>
+					<!-- 表单底部 -->
+					 <div class="iconAccout" >
+                    <div>你也可以使用以下帐号登录</div>
+                    <p>
+                        <a href="#" class="a1" title="QQ">QQ</a>
+                        <a href="#" class="a2" title="支付宝">支付宝</a>
+                        <a href="#" class="a3" title="新浪微博">新浪微博</a>
+                        <a href="#" class="a4" title="360">360</a>
+                        <a href="#" class="a5" title="百度">百度</a>
+                        <span>更多<i></i></span>
+                    </p>
+                    <p class="icon-p" style="display: none;">
+                        <a href="#" class="a6" title="微信">微信</a>
+                        <a href="#" class="a7" title="人人">人人</a>
+                        <a href="#" class="a9" title="团800">团800</a>
+                    </p>
+                </div>
+					<!-- 表单结束 -->
+				</div>
+			</div>
+			<!-- 中部结束 -->
+			<!-- 足部开始 -->
+			<div class="footer">
+				<p>
+					Copyright&copy;2010-2015 北京创锐文化传媒有限公司 Jumei.com 保留一切权利。客服热线：400-123-8888
+				</p>
+				<p>
+					京公网安备 11010102001226 号 | 京ICP证111033号 | 食品流通许可证 SP1101051110165515（1-1） | 营业执照 | 公示制度
+				</p>
+				<ul class="footer-link">
+					<li>
+						<a><img src="imgs/footerone.png"></a>
+					</li>
+					<li>
+						<a href="#"><img src="imgs/footertwo.png"></a>
+					</li>
+					<li>
+						<a href="#"><img src="imgs/footerthree.png"></a>
+					</li>
+					<li>
+						<a href="#"><img src="imgs/footerfour.png"></a>
+					</li>
+					<li>
+						<a href="#"><img src="imgs/footerfive.png"></a>
+					</li>
+				</ul>
+			</div>
+			<!-- 足部结束 -->
+		</div>
+		<!-- 整体结束 -->
+	</body>
+</html>
