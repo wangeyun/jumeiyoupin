@@ -9,7 +9,13 @@ $(function() {
 				}
 			})
 	});
-	$("input").change(function(){
-		$("input+div").css("display","block");
+	$("input").each(function(){
+		$(this).change(function(){
+			var index = $(this).index();
+			$(this).next().show();
+		})
 	})
+	// $("input").change(function(){
+	// 	
+	// })
 })
