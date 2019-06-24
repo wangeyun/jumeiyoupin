@@ -441,19 +441,19 @@ form a{
 	line-height: 30px;
 	font-size: 14px;
 	width: 90px;
-	background: #ccc;
+	background: #F8296D;
 	display: inline-block;
 	color:#000;
+	text-align: center;
 };
 .verityWrap .textbox_ui{
 	display: flex;
 	justify-content: space-between;
 };
 #change_verify_code{
-	color: #F8296D
-}
-
-
+	color: #F8296D;
+    font-size: 15px;
+};
 // 表下部
 .loginbtn{
 	height: 30px;

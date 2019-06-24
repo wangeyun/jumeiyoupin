@@ -101,9 +101,11 @@ $(function(){
 
 	//登陆
 	$(".loginbtn").click(function() {
+		var name = $("#username").val();
+		var password = $("login_password").val();
 		$.post("http://47.104.244.134:8080/userlogin.do",{
-			name:"aaaa_xxxz",
-			password:111111}).done(function(data){
+			name:name,
+			password:password}).done(function(data){
 			if(data.code == 0){
 				window.location.href = "index.html"
 			}else{

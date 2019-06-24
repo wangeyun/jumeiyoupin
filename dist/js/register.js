@@ -69,6 +69,7 @@ $(function() {
 				//等待动画
 				$("#loginitemone").show();
 				$("#loginimg_one").show();
+				$(".footer").hide();
 			//没有重复，提交注册 
 			$.post("http://47.104.244.134:8080/usersave.do",{
 				username:uesrname,
