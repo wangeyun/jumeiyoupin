@@ -4,6 +4,8 @@
 		<meta charset="UTF-8">
 		<title>登陆聚美</title>
 		<link rel="stylesheet" href="css/login.css" />
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/login.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<!-- 整体开始 -->
@@ -36,32 +38,33 @@
 						</div>
 						<div class="radio_wrapper">
 							<span>
-								<input name="method" type="radio" rel="login-dynamic-form" value="dynamic" id="radio_dynamic" />
+								<input name="method" id="radioone" type="radio" checked="checked" rel="login-dynamic-form" value="dynamic" id="radio_dynamic" />
 								<span>
 									手机动态密码登录
 								</span>
 							</span>
 							<span>
-								<input name="method" type="radio" rel="login-user-form" value="normal" id="radio_normal" />
+								<input name="method" id="radiotwo" type="radio" rel="login-user-form" value="normal" id="radio_normal" />
 								<span>
 									普通登录
 								</span>
 							</span>
 						</div>
+						<div id="login-user-light" >
 						<input style="display:none" type="text" name="fakeusernameremembered" />
 						<input style="display:none" type="password" name="fakepasswordremembered" />
-						<div class="textbox_ui user"  style="display:none">
+						<div class="textbox_ui user"  >
 							<input type="text" placeholder="已注册的手机号码" id="dynamic_mobile" autofocus autocomplete="off" value="">
-							<div class="focus_text">请输入11位手机号码</div>
+							<div class="focus_text" style="display: none">请输入11位手机号码</div>
 							<div class="invalid">
 								<i></i>
 								<div class="msg"></div>
 							</div>
 						</div>
-						<div class="dynamic_pass_wrap line" id="dynamicpassone"  style="display:none">
+						<div class="dynamic_pass_wrap line" id="dynamicpassone"  >
 							<div class="textbox_ui dynamic_pass pass">
 								<input type="text" placeholder="动态密码" id="dynamic_password" autocomplete="off">
-								<div class="focus_text">请点击获取手机动态密码</div>
+								<div class="focus_text" style="display: none" >请点击获取手机动态密码</div>
 								<div class="hint"></div>
 								<div class="invalid">
 									<i></i>
@@ -70,23 +73,24 @@
 							</div>
 							<a href="javascript:;" id="getPhoneCode" class="phonecode"><strong>获取手机动态密码</strong></a>
 						</div>
-						<p class="dynamic_auto_left"  style="display:none">
+						<p class="dynamic_auto_left"  >
 							<label for="dynamic_auto_login">
 								<input type="checkbox" id="dynamic_auto_login" checked>
 								&nbsp;自动登录
 							</label>
 						</p>
 
-						<input  style="display:none" class="loginbtn submit_btn" type="submit" value="登 录" style=" display: block;width: 100%;">
-
+						<input id="loginbtnone"  class="loginbtn submit_btn" type="button" value="登 录" style=" display: block;width: 100%;">
+						</div>
 					</form>
 					<!-- 表单开始表2 -->
-					<form id="login-user-form" method="post" action="/i/account/login">
+					<form id="login-user-form" style="display: none;" method="post" action="/i/account/login">
                     <input style="display:none" type="text" name="fakeusernameremembered"/>
                     <input style="display:none" type="password" name="fakepasswordremembered"/>
+					<div id="login-user-light">
                     <div class="textbox_ui user">
                         <input type="text" placeholder="已验证手机/邮箱/用户名" id="username" autofocus autocomplete="off" value="">
-                        <div class="focus_text">请输入登录名可能是您的手机号、邮箱或用户名</div>
+                        <div class="focus_text" >请输入登录名可能是您的手机号、邮箱或用户名</div>
                         <div class="invalid">
                             <i></i>
                             <div class="msg"></div>
@@ -94,42 +98,29 @@
                     </div>
                     <div class="textbox_ui pass">
                         <input type="password" placeholder="密码" id="login_password" autocomplete="off">
-                        <div class="focus_text">请输入您的密码可能为字母、数字或符号的组合</div>
+                        <div class="focus_text" >请输入您的密码可能为字母、数字或符号的组合</div>
                         <div class="invalid">
                             <i></i>
                             <div class="msg"></div>
                         </div>
                     </div>
-                    <div class="gtVerifyWrap">
-                        <div class="textbox_ui">
-                            <p class="gtHeader">请拖动下方的滚动条，完成拼图验证</p>
-                            <div class="clearfix">
-                                
-                            </div>
-                            <div id="gt_verify"></div>
-                            <div class="invalid">
-                                <i></i>
-                                <div class="msg"></div>
-                            </div>
-                        </div>
+                    <div class="sliding">
+                    	请按住滑块，拖至最右侧。
+                    	<p></p>
+                    	<span class="span1_back"></span>
                     </div>
-					<div class="aliyunWrap textbox_ui">
-					    <div id="aliyun_verify" style="width:300px;height:46px;" ></div>
-					    <div class="invalid aliyun_invalid">
-					        <i></i>
-					        <div class="msg"></div>
-					    </div>
-					</div>
                     <div class="verityWrap" style="display:none">
                         <div class="textbox_ui">
-                            <input type="text" placeholder="验证码" autocomplete="off" id="verify_code" maxlength="4">
-                            <div class="focus_text">按右图填写，不区分大小写</div>
-                            <div class="invalid">
+                            <div>
+								<input type="text" placeholder="验证码" autocomplete="off" id="verify_code" maxlength="4">
+								<div class="focus_text" >按右图填写，不区分大小写</div>
+                            </div>
+							<div class="invalids">
                                 <i></i>
                                 <div class="msg"></div>
                             </div>
                         </div>
-                        <span id="change_verify_code"><img src="">换一张</span>
+                        <span id="change_verify_code"><img src="">点击切换验证码</span>
                     </div>
                     <p class="dynamic_auto_between">	
 						<label for="auto_login">
@@ -138,8 +129,9 @@
 						</label>
                         <a href="/i/account/resetreq?=login" class="fr">忘记密码?</a>
                     </p>
-                    <input class="loginbtn submit_btn" type="submit" value="登 录" style=" display: block;width: 100%;">
+                    <input class="loginbtn submit_btn" type="button" value="登 录" style=" display: block;width: 100%;">
                     <div id="errorMsg"></div>
+					</div>
                 </form>
 					<!-- 表单底部 -->
 					 <div class="iconAccout" >
@@ -150,7 +142,7 @@
                         <a href="#" class="a3" title="新浪微博">新浪微博</a>
                         <a href="#" class="a4" title="360">360</a>
                         <a href="#" class="a5" title="百度">百度</a>
-                        <span>更多<i></i></span>
+                        <span>更多<i class="puls"></i></span>
                     </p>
                     <p class="icon-p" style="display: none;">
                         <a href="#" class="a6" title="微信">微信</a>

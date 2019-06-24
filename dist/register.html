@@ -59,7 +59,7 @@
 				<!-- 中部右边 -->
 				<div class="nav-right">
 					<!-- 表单开始 -->
-					<form action="#" method="get">
+					<form id="fff" action="#" method="get">
 						<div class="user-register">
 							<a href="register.html" id="register">用户注册</a>
 							<span class="to-login">已有账户?
@@ -67,13 +67,13 @@
 							</span>
 						</div>
 						<input type="text" placeholder="手机号" />
-						<div class="focus_text" style="display: none;">请输入11位手机号码</div>
+						<div class="focus_text" style="display: none">请输入11位手机号码</div>
 						<input type="text" placeholder="短信验证码" />
 						<input type="button" id="getCHeckCode" value="获取短信校验" />
 						<input type="text" placeholder="密码" />
-						<div class="focus_text">6-16个字符，建议使用字母加数字或符号组合</div>
+						<div class="focus_text" style="display: none">6-16个字符，建议使用字母加数字或符号组合</div>
 						<input type="text" placeholder="重复密码" />
-						<div class="focus_text">请再次输入密码</div>
+						<div class="focus_text" style="display: none">请再次输入密码</div>
 						<button id="btn-register">
 							同意协议并注册
 						</button>
@@ -112,6 +112,12 @@
 			<!-- 足部结束 -->
 		</div>
 		<!-- 整体结束 -->
-
+		
+		<!-- 等待动画 -->
+		<div id="loginitemone">
+			<div id="loginimg_one">
+				<img src="imgs/4ca4c6636fdf0a21dc4e94f254afd50a.gif">
+			</div>
+		</div>
 	</body>
 </html>

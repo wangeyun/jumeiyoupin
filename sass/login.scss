@@ -245,14 +245,14 @@ form a{
 	display: inline-block;
 	
 }
-.user input, .pass input, .otherAccout i, .textbox_ui .valid, .textbox_ui .invalid i {
+#username,#login_password,#dynamic_mobile,#dynamic_password{
     background-image: url(/imgs/sign.png);
     background-repeat: no-repeat;
 };
-.user input {
+#username {
     background-position: 5px 0;
 };
-.pass input {
+#login_password {
     background-position: 5px -50px;
 };
 // 表一
@@ -271,7 +271,8 @@ form a{
     height: auto;
 	padding-left: 38px;
 	cursor: pointer;
-
+	margi-top: 10px;
+	margin-bottom: 10px;
 }
 #dynamic_password{
 	box-sizing: border-box;
@@ -288,6 +289,8 @@ form a{
 	width: 120px;
 	display: inline-block;
 	cursor: pointer;
+	margi-top: 10px;
+	margin-bottom: 10px;
 }
 .phonecode {
 	background: linear-gradient(to bottom,#fcfcfc,#f2f2f2);
@@ -376,8 +379,79 @@ form a{
 	display: flex;
     justify-content: space-between;
 };
+//滑块
+.sliding {
+	width: 275px;
+	height: 39px;
+	margin: 20px auto;
+	background: rgba(212, 212, 212, 1);
+	text-align: center;
+	line-height: 40px;
+	position: relative;
+}
 
+.sliding>p {
+	width: 0px;
+	height: 100%;
+	position: absolute;
+	top: -12px;
+	left: 0;
+	background: #7BBB55;
+	z-index: 99;
+	color: #FFFFFF;
+	text-align: center;
+	overflow: hidden;
+}
 
+.sliding>span {
+	display: block;
+	width: 46px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-size: cover;
+	cursor: pointer;
+	z-index: 999;
+}
+
+.span1_back {
+	background: url(../imgs/huadongtupian.png) no-repeat center center;
+}
+
+.span2_back {
+	background: url(../imgs/huadongtupian.png)no-repeat center center;
+}
+//滑块结束 提交验证码
+//隐藏验证码
+.verityWrap{
+	display: flex;
+	justify-content: space-between;
+}
+.textbox_ui input {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    width: 90px;
+    background: #fff;
+};
+.invalids{
+	margin-right: 22px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	width: 90px;
+	background: #ccc;
+	display: inline-block;
+	color:#000;
+};
+.verityWrap .textbox_ui{
+	display: flex;
+	justify-content: space-between;
+};
+#change_verify_code{
+	color: #F8296D
+}
 
 
 // 表下部
@@ -451,7 +525,7 @@ form a{
     top: 5px\9;
     _top: 7px;
     background-position: -274px -23px;
-    transition: .3s ease-in;
+   
 };
 .iconAccout span i {
     background-image: url(/imgs/icon.jpg);
@@ -468,6 +542,7 @@ form a{
 .iconAccout span .slider1 {
     background-position: -274px 0;
 }
+
 
 
 // 中部右边结束

@@ -223,7 +223,6 @@ span{
 	margin: 30px 0;
 }
 .top-link a{
-	
 	display:inline-block;
 	width:110px;
 	height: 35px;
@@ -332,3 +331,31 @@ ul li a{
 	width:126px;
 	height:51px;
 }
+// 等待动画
+#loginitemone{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.3);
+	display: none;
+}
+#loginimg_one{
+	width: 120px;
+	height: 120px;
+	background: red;
+	overflow: hidden;
+	border-radius: 50%;
+		position:absolute;
+		left:50%;
+		top:210px;
+		margin-left: -60px;
+		display: none;
+	}
+	#loginimg_one img{
+		position: absolute;
+		width: 500px;
+		top: -106px;
+		left: -190px;
+	}
