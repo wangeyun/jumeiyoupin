@@ -1,0 +1,116 @@
+html{color:#000;background:#FFF;}   
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,   
+fieldset,input,textarea,p,blockquote,th,td {   
+margin:0;   
+padding:0;   
+};
+table{   
+border-collapse:collapse;   
+border-spacing:0;   
+};  
+fieldset,img {   
+border:0;   
+};  
+address,caption,cite,code,dfn,em,strong,th,var {   
+font-style:normal;   
+font-weight:normal;   
+};  
+ol,ul {   
+list-style:none;   
+};  
+caption,th {   
+text-align:left;   
+};  
+h1,h2,h3,h4,h5,h6 {   
+font-size:100%;   
+font-weight:normal;   
+}   
+q:before,q:after {   
+content:'';   
+};  
+abbr,acronym { border:0;   
+};  
+@charset "utf-8";  
+*{  
+    margin: 0px;  
+    padding: 0px;  
+      
+}   
+a{  
+    text-decoration: none;  
+    color: #000000;  
+    font-size:15px;  
+    /*字体*/  
+}; 
+li{  
+    list-style: none;  
+}; 
+input,img{  
+    border: none;  
+};
+//重置样式
+
+html {
+    color: #000;
+    background: #fff;
+};
+//默认字体
+body {
+    font: 12px/1.5 arial,'Hiragino Sans GB','\5FAE\8F6F\96C5\9ED1',sans-serif;
+};
+//内容区域样式
+.new_admall_box {
+    width: 1090px;
+    margin: 0 auto;
+    background: #f7f7f7;
+    height: 1000px;// 注意要改 auto
+};
+//内容主体展示
+.new_admall_topContent {
+    margin-bottom: 20px;
+    background-color: #FFF;
+    margin-top: 16px;
+};
+//内容左侧导航栏
+.new_admall_left_area {
+    width: 218px;
+    height: 811px;
+    float: left;
+    position: relative;
+    z-index: 2;
+};
+.left_tuijianAd {
+    width: 208px;
+    height: 150px;
+    position: absolute;
+    left: 0;
+    bottom: 6px;
+    padding: 5px 5px 5px 10px;
+};
+.new_admall_eric_menu {
+    height: 44px;
+    line-height: 44px;
+    color: #000;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+    font-weight: 700;
+    padding-left: 10px;
+};
+.new_admall_menu_content {
+    margin-bottom: 20px;
+    font-size: 0;
+    line-height: 15px;
+    _line-height: 10px;
+    width: 218px;
+};
+
+
+//内容右侧导航栏
+.new_admall_right_area{
+    width: 872px;
+    background-color: turquoise;// 注意要改 #fff
+    float: right;
+    margin-top: 10px;
+	height: 1000px;// 注意要改 auto
+};
+

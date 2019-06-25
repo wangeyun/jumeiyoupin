@@ -76,11 +76,9 @@ $(function() {
 				password:password,
 				email:uesrname+"@163.com",
 				sex:"女"
-				},function(data){
-					data = data.code;
-					if(data == 0){
-						window.location.href="login.html"
-					}
+				}).done(function(data){
+					window.location.href="login.html"
+					
 				})
 			};	
 		});

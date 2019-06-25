@@ -71,7 +71,7 @@ $(function(){
 	//随机验证码
 	function randomnumber(){  //随机生成
 			var  arr=[]
-			for(var i=0;i<5;i++){
+			for(var i=0;i<4;i++){
 				var  irandom=parseInt(Math.random()*10);
 				//语法： Math.random  返回值：0.0 ~ 1.0 之间的一个伪随机数。
 				//这里*10是变成随机一个整数
@@ -101,11 +101,11 @@ $(function(){
 
 	//登陆
 	$(".loginbtn").click(function() {
-		var name = $("#username").val();
-		var password = $("login_password").val();
+		var Name = $("#username").val();
+		var Password = $("#loginbtnone").val();
 		$.post("http://47.104.244.134:8080/userlogin.do",{
-			name:name,
-			password:password}).done(function(data){
+			name:"Name",
+			password:Password}).done(function(data){
 			if(data.code == 0){
 				window.location.href = "index.html"
 			}else{
