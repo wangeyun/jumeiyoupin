@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>聚美优品</title>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/list.js" type="text/javascript" charset="utf-8"></script>
+		
+		<link rel="stylesheet" type="text/css" href="css/list.css" />
+		<link rel="stylesheet" type="text/css" href="css/jumei.css"/>
+	</head>
+	<body>
+		
+		<div class="header header_wide_lv2">
+			<!--header top-->
+			<div class="header_top">
+				<div class="header_top_box">
+					<!--login-->
+					<ul class="header_top_left" id="headerTopLeft">
+						<li>欢迎来到聚美！</li>
+						<li class="login">
+							
+						</li>
+						<li>
+							<a href="register.html" rel="nofollow">快速注册</a>
+						</li>
+					</ul>
+					<!--login end-->
+					<!--city choose-->
+		
+					<!--city choose end-->
+					<!--right list-->
+					<ul class="header_top_right" id="headerTopRight">
+						<li>
+							<a href="">正品保证</a>
+						</li>
+						<li>
+							<a href="">订单查询</a>
+						</li>
+						<li>
+							<a href=""><s class="favorite"></s>收藏的品牌</a>
+						</li>
+						<li class="item_ijumei">
+							<a href="" rel="nofollow">我的聚美<s class=" icon-icon-arrow-down"></s></a>
+							<i class="icon_arrow_back"></i>
+							<div class="sub_nav">
+								<ul>
+									<li>
+										<a href="" rel="nofollow">我的订单</a>
+									</li>
+									<li>
+										<a href="" rel="nofollow">我的现金券</a>
+									</li>
+									<li>
+										<a href="" rel="nofollow">我的红包</a>
+									</li>
+									<li>
+										<a href="" rel="nofollow">我的余额</a>
+									</li>
+									<li>
+										<a href="" rel="nofollow">我的提现退款</a>
+									</li>
+									<li>
+										<a href="" rel="nofollow">我的收藏</a>
+									</li>
+									<li>
+										<a href="" rel="nofollow">我的心愿单</a>
+									</li>
+									<li>
+										<a href="" rel="nofollow">会员中心</a>
+									</li>
+									<li>
+										<a href="" rel="nofollow">礼品卡兑换</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="item_mobile">
+							<a href="" rel="nofollow"><span class="line"></span><s class="icon-favorite"></s>手机聚美</a>
+						</li>
+						<!--            <li class="item_koubei"><a href="-->
+						<!--/?from=-->
+						<!--_top_nav_fresh_koubei_tab_new"><s class="icon_koubei"></s>口碑中心</a></li>-->
+						<li id="see_more">
+							<span class="line"></span>
+						</li>
+						<li class="item_more">
+							<a href="">更多<s class="icon_arrow icon_arrow_down"></s></a>
+							<i class="icon_arrow_back"></i>
+							<div class="sub_nav">
+								<ul>
+									<li>
+										<a href="" target="_blank" rel="nofollow">邀请好友</a>
+									</li>
+									<li>
+										<a href="" rel="nofollow" id="bookmark_us"><span class="bottomline">加入收藏</span></a>
+									</li>
+									<li>
+										<a href="" class="er_box" rel="nofollow" target="_blank">新浪微博<span style="display: none;"><img src="http://p0.jmstatic.com/templates/jumei/images/sina_er.png"></span></a>
+									</li>
+									<li>
+										<a href="" class="er_box" rel="nofollow">聚美微信<span style="display: none;"><img src="http://p0.jmstatic.com/jumei_weixin_header1.png"></span></a>
+									</li>
+									<li>
+										<a href="http://tieba.baidu.com/f?kw=%BE%DB%C3%C0%D3%C5%C6%B7&amp;fr=ala0" class="er_box" target="_blank">百度贴吧</a>
+									</li>
+									<li>
+										<a href="" rel="nofollow" target="_blank">腾讯微博<span style="display: none;"><img src="http://p0.jmstatic.com/templates/jumei/images/qq_er.png"></span></a>
+									</li>
+									<li>
+										<a href="" class="er_box" rel="nofollow" target="_blank">人人公众主页<span style="display: none;"><img src="http://p0.jmstatic.com/templates/jumei/images/renren_er.png"></span></a>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<!--right list end-->
+				</div>
+			</div>
+			<!--header top end-->
+		
+			<!--header middle-->
+			
+			<div class="header_center">
+				<h1 class="logo"><a href="index.html"  id="home"  title="聚美优品" >
+				<img href="index.html" src="imgs/logo.jpg" /></a></h1>
+				<!-- 活动、节日入口广告位 -->
+				<!-- 活动、节日入口广告位 end -->
+				<div class="header_searchbox header_out_searchbox">
+					<form action="http://search.jumei.com" method="get" pos="top" onsubmit="return mall_search_validate(this)">
+						<input name="filter" type="hidden" value="0-11-1" />
+						<input name="search" type="text" class="header_search_input" id="header_search_input" default_val="" autocomplete="off" x-webkit-speech="" x-webkit-grammar="builtin:search" lang="zh" />
+						<input name="from" type="hidden" />
+						<input name="cat" type="hidden" />
+						<button type="submit" class="header_search_btn">搜索</button>
+					</form>
+					<div class="search_result_pop_a" id="top_out_search_pop_div"></div>
+		
+					<ul class="hot_word">
+						<li>
+							<a href="list.html" target="_blank" data-id="8">保湿</a><s class="line"></s></li>
+						<li>
+							<a target="_blank" href="list.html" data-id="9">面膜</a><s class="line"></s></li>
+						<li>
+							<a target="_blank" href="list.html" data-id="10">洗面奶</a><s class="line"></s></li>
+						<li>
+							<a target="_blank" href="list.html" data-id="11">补水</a><s class="line"></s></li>
+						<li>
+							<a target="_blank" href="list.html" data-id="13">香水</a><s class="line"></s></li>
+						<li>
+							<a target="_blank" href="list.html">眼霜</a><s class="line"></s></li>
+						<li>
+							<a target="_blank" href="list.html">口红</a><s class="line"></s></li>
+						<li>
+							<a target="_blank" href="list.html">护肤套装</a><s class="line"></s></li>
+						<li>
+							<a target="_blank" href="list.html">BB霜</a>
+						</li>
+					</ul>
+				</div>
+		
+				<div id="cart_box" class="cart_box">
+					<a id="cart" class="cart_link" href="" rel="nofollow">
+						<img src="http://p0.jmstatic.com/assets/cart.gif" width="28" height="28" class="cart_gif" />
+						<span class="text">去购物车结算</span>
+						<span class="num" style='display: none;'></span>
+						<s class="icon_arrow_right"></s>
+					</a>
+		
+					<div class="cart_content" id="cart_content">
+						<i class="cart-icons"></i>
+						
+						<div class="cart_content_all">
+							<div class="cart_left_time">已超过购物车商品保留时间，请尽快结算。</div>
+							<div class="cart_content_center"></div>
+							<div class="con_all">
+								<div class="price_whole"><span>共<span class="num_all"></span>件商品</span>
+								</div>
+								<div><span class="price_gongji">共计<em>￥</em><span class="total_price">69</span></span>
+									<a href="" class="cart_btn" rel="nofollow">去购物车结算</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--header middle end-->
+			<!--header bottom-->
+			<div class="header_bottom">
+				<div class="channel_nav_box">
+					<div class="channel_nav_list_wrap">
+		
+						<ul class="channel_nav_list">
+							<li class="current">
+								<a href="index.html" >首页</a>
+							</li>
+							<li class="haitao_li">
+								<a href="list.html"></a>
+							</li>
+							<li class="">
+								<a href="list.html"></a>
+							</li>
+							<li class="current">
+								<b></b>
+								<a href="list.html"></a>
+								<div class="header_pop_subAtc box-shadow" id="header_pop_subAct">
+									<div class="mz_imglist">
+										<a target="_blank" href="list.html"><img src="http://p0.jmstatic.com/banner/3481/30573_254_135_003-web.jpg" /></a>
+										<a target="_blank" href="list.html"><img src="http://p0.jmstatic.com/banner/3481/30573_254_135_005-web.jpg" /></a>
+									</div>
+									<div class="mz_inner clearfix">
+										<dl style="border-left:none">
+											<dt class="item_int png"><a>国际大牌</a></dt>
+											<dd>
+												<a href="detail.html" target="_blank">兰蔻</a>
+											</dd>
+											<dd>
+												
+											</dd>
+											<dd>
+												
+											</dd>
+											<dd>
+												
+											</dd>
+											<dd>
+												
+											</dd>
+											<dd>
+												
+											</dd>
+											<dd>
+												
+											</dd>
+		
+											<dd>
+												
+											</dd>
+											<dd>
+												
+											</dd>
+											<dd>
+												
+											</dd>
+		
+										</dl>
+										<dl>
+											<dt class="item_hufu png"><a href="list.html" target="_blank"> 护肤</a></dt>
+											<dd>
+												<a href="" target="_blank">洁面</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">爽肤水</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">精华</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">乳液</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">面霜</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">眼霜</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">面膜</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">护肤套装</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt class="item_caizhuang png"><a href="list.html" target="_blank">彩妆</a></dt>
+											<dd>
+												<a href="" target="_blank">卸妆</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">BB霜</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">粉底液</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">粉饼</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">眼影</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">眼线笔</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">睫毛膏</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">眉笔</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">口红</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">腮红</a>
+											</dd>
+										</dl>
+										<dl style="border-bottom:none;border-left:none">
+											<dt class="item_xiangfen png"><a href="list.html" target="_blank">香氛</a></dt>
+											<dd>
+												<a href="" target="_blank">女士香水</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">男士香水</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">中性香水</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">Q版香水</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">香水套装</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">精油</a>
+											</dd>
+										</dl>
+										<dl style="border-bottom:none">
+											<dt class="" target="_blank">男士专区</dt>
+											<dd>
+												<a href="" target="_blank">洁面</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">爽肤水</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">面霜</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">精华</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">护肤套装</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">洗发</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">沐浴</a>
+											</dd>
+										</dl>
+										<dl style="border-bottom:none">
+											<dt class="item_hot png"><a>热门搜索</a></dt>
+											<dd>
+												<a href="" target="_blank">面膜贴</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">洗面奶</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">唇膏</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">去黑头</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">祛斑</a>
+											</dd>
+											<dd>
+												<a href="3" target="_blank">隔离</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">祛痘</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">去角质</a>
+											</dd>
+											<dd>
+												<a href="" target="_blank">指甲油</a>
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</li>
+							<li class="">
+								<a href="detail.html"></a>
+							</li>
+							<li>
+								<a href="detail.html" target="_blank" ></a>
+							</li>
+							<li>
+								<a href="detail.html" target="_blank" ></a>
+							</li>
+						</ul>
+						<div class="header_pop_subAtc box-shadow" id="header_pop_subAct"></div>
+						<!--导航icon 动画-->
+						<ul id="icon_wrap" class="icon_Wrap">
+							<li>
+								<div class="divlist divlist01">
+									<a href="http://hd.jumei.com/act/4-478-2232-guarantee.html?from=Deal_show_nav_fresh_new_2"><span class=""></span> <b>品牌防伪码</b></a>
+								</div>
+							</li>
+							<li>
+								<div class="divlist divlist03">
+									<a href="http://www.jumei.com/help/two_for_freeshipping?from=header"><span class="by"></span> <b>美妆满2件或299包邮</b></a>
+								</div>
+							</li>
+						</ul>
+						<!--导航icon 动画 end-->
+					</div>
+				</div>
+			</div>
+		
+		</div>
+		<!--header bottom end-->
+		
+		
+		
+		<!-- //中部内容 -->
+		<div class="new_admall_box">
+			<!-- //中部开始 -->
+			<div class="new_admall_topContent clearfix">
+				<!-- //中部左边 -->
+				<div class="new_admall_left_area mtsCategory" id="mtsCategory">
+					<div class="pmggw_left">
+						<div class="mtscategory_box" style="z-index:100;">
+							<div class="mc_content">
+								<h3 class="new_admall_eric_menu">
+									全部分类
+								</h3>
+								<ul class="new_admall_menu_content">
+									<li  class="new_admall_menu_li0 item" id="0">
+										<div id="leftberrya">
+											
+										</div>
+									</li>
+									<li  class="new_admall_menu_li0 item" id="1">
+										<div id="leftberryb">
+											
+										</div>
+									</li>
+									<li  class="new_admall_menu_li0 item" id="2">
+										<div id="leftberryc">
+											
+										</div>
+									</li>
+									<li  class="new_admall_menu_li0 item" id="3">
+										<div id="leftberryd">
+											
+										</div>
+									</li>
+									<li class="new_admall_menu_li0 item" id="newlione">
+										<h3 class="new_admall_menu_title">
+											推荐品牌
+										</h3>
+										<p class="new_admall_menu_cont">
+											<a href="#">欧莱雅</a>
+											<a href="#">菲诗小铺</a>
+											<a href="#">雅诗兰黛</a>
+											<a href="#">韩束</a>
+											<a href="#">倩碧</a>
+											<a href="#">雅顿</a>
+											<a href="#">佰草集</a>
+										</p>
+										<div id="leftberry">
+											<div id="leftberryleft">
+												<h3 class="new_admall_menu_title news_admall_menu_title">
+												推荐品牌
+												</h3>
+												<p class="new_admall_menu_cont news_admall_menu_cont">
+													<a href="#">欧莱雅</a>
+													<a href="#">菲诗小铺</a>
+													<a href="#">雅诗兰黛</a>
+													<a href="#">韩束</a>
+													<a href="#">倩碧</a>
+													<a href="#">雅顿</a>
+													<a href="#">佰草集</a>
+												</p>
+											</div>
+											<div id="leftberryright">
+												<img src="imgs/38506_202_202_002-web.jpg" >
+												<img src="imgs/28501_202_202_003-web.jpg" >
+											</div>
+											
+										</div>
+									</li>
+									<li class="new_admall_menu_li0 item" id="newlitwo">
+										<h3 class="new_admall_menu_title">
+											护肤
+										</h3>
+										<p class="new_admall_menu_cont">
+											<a href="#">洁面</a>
+											<a href="#">化妆水</a>
+											<a href="#">精华</a>
+											<a href="#">乳液</a>
+											<a href="#">面霜</a>
+											<a href="#">眼霜</a>
+											<a href="#">面膜</a>
+											<a href="#">护肤套装</a>
+										</p>
+										<div id="leftberryone">
+											<div id="leftberryleft">
+												<h3 class="new_admall_menu_title news_admall_menu_title">
+												护肤
+												</h3>
+												<p class="new_admall_menu_cont news_admall_menu_cont">
+													<a href="#">洁面</a>
+													<a href="#">化妆水</a>
+													<a href="#">精华</a>
+													<a href="#">乳液</a>
+													<a href="#">面霜</a>
+													<a href="#">眼霜</a>
+													<a href="#">面膜</a>
+													<a href="#">护肤套装</a>
+												</p>
+											</div>
+											<div id="leftberryright">
+												<img src="imgs/38506_202_202_002-web.jpg" >
+												<img src="imgs/28501_202_202_003-web.jpg" >
+											</div>
+										</div>
+									</li>
+									<li class="new_admall_menu_li0 item" id="newlithree">
+										<h3 class="new_admall_menu_title">
+											彩妆
+										</h3>
+										<p class="new_admall_menu_cont">
+											<a href="#">欧莱雅</a>
+											<a href="#">菲诗小铺</a>
+											<a href="#">雅诗兰黛</a>
+											<a href="#">韩束</a>
+											<a href="#">倩碧</a>
+											<a href="#">雅顿</a>
+											<a href="#">佰草集</a>
+										</p>
+										<div id="leftberrytwo">
+											<div id="leftberryleft">
+												<h3 class="new_admall_menu_title news_admall_menu_title">
+												彩妆
+												</h3>
+												<p class="new_admall_menu_cont news_admall_menu_cont">
+													<a href="#">欧莱雅</a>
+													<a href="#">菲诗小铺</a>
+													<a href="#">雅诗兰黛</a>
+													<a href="#">韩束</a>
+													<a href="#">倩碧</a>
+													<a href="#">雅顿</a>
+													<a href="#">佰草集</a>
+												</p>
+											</div>
+											<div id="leftberryright">
+												<img src="imgs/38506_202_202_002-web.jpg" >
+												<img src="imgs/28501_202_202_003-web.jpg" >
+											</div>
+										</div>
+									</li>
+									
+
+								</ul>
+							</div>
+							
+						</div>
+						<!-- //左边小广告 -->
+						<div class="left_tuijianAd">
+							<img src="imgs/220620_198_150_002-web.jpg">
+						</div>
+					</div>
+				</div>
+				<!-- //中部右边 -->
+				<div class="new_admall_right_area clearfix" style="left: 0px;" id="J_left_tuijianAd">
+					<div class="new_admall_adBanner J_new_admall_adBanner">
+						<!-- //轮播图 -->
+						<div class="sc_container">
+							<ul class="new_admall_content">
+								<li style="display: none;">
+									<img class="new_lunboshow" src="imgs/220540_675_435_002-web.jpg">
+								</li>
+								<li style="display: none;">
+									<img class="new_lunboshow" src="imgs/220542_675_435_002-web.jpg">
+								</li>
+								<li style="display: none;">
+									<img class="new_lunboshow" src="imgs/220544_675_435_002-web.jpg">
+								</li>
+							</ul>
+						</div>
+						<!-- //右下角图标 -->
+						<div class="new_admall_nav">
+							<ul>
+								<li class="select"></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</div>
+						<!-- //左右角 -->
+						<div id="bannerlist">
+							<span id="bannerlist_spanleft"><img src="imgs/eric_left_mall_index.png"></span>
+							<span id="bannerlist_spanright"><img src="imgs/eric_right_mall_index.png"></span>
+						</div>
+					</div>
+					<!-- //右边广告栏 -->
+					<div class="new_admall_tuijianAd">
+						<div class="tuijianAd" style="left: 0px;">
+							<img src="imgs/220682_212_145_002-web.jpg">
+						</div>
+						<div class="tuijianAd" style="left: 0px;">
+							<img src="imgs/220680_212_145_003-web.jpg">
+						</div>
+						<div class="tuijianAd" style="left: 0px;">
+							<img src="imgs/220588_212_145_002-web.jpg">
+						</div>
+					</div>
+					<!-- //右下边滑块 -->
+					<div class="brand_wall_switchable ecope_switchable" id="brandWallSwitchable">
+						<div class="sc_index clearfix">
+							<a href="#" class="current  one" data-index="0">推荐品牌<span></span></a>
+							<a href="#">独家品牌<span></span></a>
+							<a href="#">欧美品牌<span></span></a>
+							<a href="#">日韩品牌<span></span></a>
+							<a href="#">国货品牌<span></span></a>
+							<a href="#">洗护品牌<span></span></a>
+						<div class="sc_container" id="tanxingbox" >
+							<ul id="zaijianaaa">
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		</div>
+
+		<div id="footer" class="footer">
+			<div id="footer_textarea">
+
+				<div class="footer_top">
+					<div class="footer_con footer_credit" id="footer_credit">
+						<a href="http://hd.jumei.com/act/4-478-2232-guarantee.html?from=footer" class="foot_link mostmall" target="_blank" rel="nofollow">
+							<span class="first corn"></span><span class="con"><b>值得信赖美妆电商</b></span>
+							<p class="footer_clr">四千万用户信赖</p>
+						</a>
+						<a href="http://hd.jumei.com/act/4-478-2232-guarantee.html?from=footer#jumei_ipo" class="foot_link quality" target="_blank" rel="nofollow">
+							<span class="corn"></span><span class="con"><b>成功在美上市</b></span>
+							<p class="footer_clr">股票代码NYSE:JMEI</p>
+						</a>
+						<a href="http://hd.jumei.com/act/4-478-2232-guarantee.html?from=footer#brand_con" class="foot_link back" rel="nofollow" target="_blank">
+							<span class="corn"></span><span class="con"><b>品牌防伪码</b></span>
+							<p class="footer_clr">支持品牌官网验真</p>
+						</a>
+						<!-- <a href="http://hd.jumei.com/act/4-478-2232-guarantee.html?from=footer#unconditionally_backtrack" class="foot_link depot" target="_blank" rel="nofollow">
+                    <span class="corn"></span><span class="con"><b>30天未拆封可退</b></span>只要您未拆封无条件退货
+                </a> -->
+						<a href="http://hd.jumei.com/act/4-478-2232-guarantee.html?from=footer#user_confide" class="foot_link consignment" target="_blank" rel="nofollow">
+							<span class="corn"></span><span class="con"><b>百万用户口碑</b></span>
+							<p class="footer_clr">帮你只选对的,不选贵的</p>
+						</a>
+						<a href="http://hd.jumei.com/act/4-478-2232-guarantee.html?from=footer#bold_consignment" class="foot_link packaging" target="_blank" rel="nofollow">
+							<span class="corn"></span><span class="con"><b>订单闪电发货</b></span>
+							<p class="footer_clr">1.5小时订单急速出库</p>
+						</a>
+						<a href="http://hd.jumei.com/act/4-478-2232-guarantee.html?from=footer#star_commend" class="foot_link confide" target="_blank" rel="nofollow">
+							<span class="corn"></span><span class="con"><b>大牌明星热荐</b></span>
+							<p class="footer_clr">打造精致明星脸</p>
+						</a>
+					</div>
+				</div>
+				<div class="footer_top_sen">
+					<div class="footer_con footer_links" id="footer_links">
+						<ul class="linksa">
+							<li class="links">服务保障</li>
+							<li>
+								<a href="http://hd.jumei.com/act/4-478-2232-guarantee.html?from=footer&site=bj#brand_con" target="_blank" rel="nofollow">品牌真品防伪码</a>
+							</li>
+							<li>
+								<a href="http://hd.jumei.com/act/4-478-2232-guarantee.html?from=footer" target="_blank" rel="nofollow">正品保证</a>
+							</li>
+							<li>
+								<a href="http://www.jumei.com/help/faq?from=footer" target="_blank" rel="nofollow">专属客服服务</a>
+							</li>
+							<li><span class="footer_zcemail">总裁邮箱ceo@jumei.com</span></li>
+						</ul>
+						<ul class="linksb">
+							<li class="links">使用帮助</li>
+							<li>
+								<a href="http://www.jumei.com/help/guidebook" target="_blank" rel="nofollow">新手指南</a>
+							</li>
+							<li>
+								<a href="http://www.jumei.com/help/faq" target="_blank" rel="nofollow">常见问题</a>
+							</li>
+							<li>
+								<a href="http://www.jumei.com/help/main" target="_blank" rel="nofollow">帮助中心</a>
+							</li>
+							<li>
+								<a href="http://www.jumei.com/i/help/user_terms" target="_blank" rel="nofollow">用户协议</a>
+							</li>
+							<li>
+								<a href="http://f1.jmstatic.com/static_account/dist/v1.0.85067/images/other/zhidu.pdf" target="_blank" rel="nofollow">公示制度</a>
+							</li>
+							<li>
+								<a href="http://www.jumei.com/help/privacy_policy" target="_blank" rel="nofollow">聚美隐私权政策</a>
+							</li>
+							<li>
+								<a href="http://www.jumei.com/help/personal_information" target="_blank" rel="nofollow">个人信息管理规则</a>
+							</li>
+							<li>
+								<a href="http://www.jumei.com/help/feedback" target="_blank" rel="nofollow">意见反馈及投诉举报规则</a>
+							</li>
+							<li>
+								<a href="http://www.jumei.com/help/intellectual_property" target="_blank" rel="nofollow">知识产权维权处理规则</a>
+							</li>
+						</ul>
+						<ul class="linksc">
+							<li class="links">支付方式</li>
+							<li>
+								<a href="" target="_blank" rel="nofollow">货到付款</a>
+							</li>
+							<li>
+								<a href="" target="_blank" rel="nofollow">在线支付</a>
+							</li>
+							<li>
+								<a href="" target="_blank" rel="nofollow">余额支付</a>
+							</li>
+							<li>
+								<a href="" target="_blank" rel="nofollow">现金券支付</a>
+							</li>
+						</ul>
+
+						<ul class="linksd">
+							<li class="links">配送方式</li>
+							<li>
+								<a href="" target="_blank" rel="nofollow">包邮政策</a>
+							</li>
+							<li>
+								<a href="" target="_blank" rel="nofollow">配送说明</a>
+							</li>
+							<li>
+								<a href="" target="_blank" rel="nofollow">运费说明</a>
+							</li>
+							<li>
+								<a href="" target="_blank" rel="nofollow">验货签收</a>
+							</li>
+						</ul>
+
+						<ul class="linkse">
+							<li class="links">售后服务</li>
+							<li>
+								<a href="" target="_blank" rel="nofollow">正品承诺</a>
+							</li>
+							<li>
+								<a href="" target="_blank" rel="nofollow">售后咨询</a>
+							</li>
+							<li>
+								<a href="" target="_blank" rel="nofollow">退货政策</a>
+							</li>
+							<li>
+								<a href="" target="_blank" rel="nofollow">退货办理</a>
+							</li>
+						</ul>
+						<div class="links_er_box">
+							<ul class="linksf">
+								<li class="links">手机聚美</li>
+								<li><span class="link_bottom_pic"></span></li>
+								<li>下载移动客户端</li>
+							</ul>
+							<ul class="linksg">
+								<li class="links">聚美微信</li>
+								<li><span class="link_bottom_pic"></span></li>
+								<li>聚美官方微信</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="footer_dy" id="footer_dy">
+					<div class="play_box"><span class="play"></span></div>
+				</div>
+				<div class="footer_center">
+					<div class="footer_con" id="footer_link">
+						<a href="" target="_blank" rel="nofollow">关于聚美优品</a>
+						<a href="" target="_blank" rel="nofollow">INVESTOR RELATIONS</a>
+						<a href="" target="_blank" rel="nofollow">合作招商</a>
+						<a href="" target="_blank" rel="nofollow">获取更新</a>
+						<a href="" target="_blank" rel="nofollow">加入聚美</a>
+						<a href="" target="_blank" rel="nofollow">品牌合作专区</a>
+						<a href="" target="_blank" rel="nofollow">网站联盟</a>
+						<a href="" target="_blank" rel="nofollow">媒体报道</a>
+						<a href="" target="_blank" rel="nofollow">商务合作</a>
+					</div>
+				</div>
+				<div id="footer_copyright" class="footer_copyright">
+					<div class="footer_con">
+						<p class="footer_copy_con">
+							COPYRIGHT &copy; 2010-2019 北京创锐文化传媒有限公司 JUMEI.COM 保留一切权利。 客服热线：400-123-8888
+							<br/> 京公网安备 11010102001226 |
+							<a href="" target="_blank" rel="nofollow">京ICP证111033号</a>
+							|
+							<a href="">食品经营许可证</a>
+							|
+							<a href="" target="_blank" rel="nofollow">营业执照</a>
+							|
+							<a href="" target="_blank" rel="nofollow">ICP许可证</a>
+							|
+							<a href="" target="_blank" rel="nofollow">出版物经营许可证</a>
+							|
+							<a href="" target="_blank" rel="nofollow">第二类医疗器械经营备案凭证</a>
+							|
+							<a href="" target="_blank" rel="nofollow">网络食品交易第三方平台提供者备案信息表</a>
+							|
+							<a href="" target="_blank" rel="nofollow">增值电信业务经营许可证</a>
+						</p>
+						<p>
+							<a href="" rel="nofollow"></a>
+							<a href="" target="_blank" class="footer_copy_logo logo02" rel="nofollow"></a>
+							<a href="" rel="nofollow"></a>
+							<a href="" rel="nofollow"></a>
+							<a href="" target="_blank" class="footer_copy_logo logo05" rel="nofollow"></a>
+							<a href="" class="footer_logo6" rel="nofollow"></a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--侧部-->
+	</body>
+</html>

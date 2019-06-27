@@ -100,14 +100,24 @@ $(function(){
 	});
 
 	//登陆
-	$(".loginbtn").click(function() {
+	$(".loginbtn").click(function(){
 		var Name = $("#username").val();
-		var Password = $("#loginbtnone").val();
+		var Password = $("#login_password").val();
+		var d=new Date();
+		d.setDate(d.getDate()+10)
+		console.log(Name,Password)
+		if( Password==""){
+				alert("不能为空");
+				return false;
+		}
 		$.post("http://47.104.244.134:8080/userlogin.do",{
-			name:"Name",
+			name:Name,
 			password:Password}).done(function(data){
+				console.log(Name,Password)
 			if(data.code == 0){
 				window.location.href = "index.html"
+				document.cookie= "name"+"="+ Name+";expires"+d;
+				document.cookie="token"+"="+data.data.token+";expires"+d;
 			}else{
 				alert("登陆失败");
 				return false;
