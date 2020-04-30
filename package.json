@@ -29,7 +29,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "gulp-util": "^3.0.8",
-    "jquery": "^1.11.0"
+    "jquery": "^3.5.0"
   },
   "dependencies": {
     "i": "^0.3.6"
